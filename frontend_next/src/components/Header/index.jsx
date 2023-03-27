@@ -1,9 +1,15 @@
 import React from 'react';
-import Image from 'next/image';
+import { useNextSanityImage } from 'next-sanity-image';
+import Image from 'next/legacy/image';
+
+import client from '@/src/sanity';
 
 import styles from './Header.module.sass';
 
 const Header = ({ header }) => {
+  const imageProps = useNextSanityImage(client, header.image);
+  console.log(imageProps);
+
   return (
     <header className={styles.header}>
       <div className={styles.content}>
@@ -11,8 +17,13 @@ const Header = ({ header }) => {
         <p>{header.subtitle}</p>
       </div>
       <div className={styles.image}>
-        <img
-          src='https://cdn.sanity.io/images/jwhvy7bf/production/290512895d7a75c942f1d2a0113bea54dc2154bf-580x277.png'
+        <Image
+          src={imageProps.src}
+          objectFit='contain'
+          width={500}
+          height={500}
+          layout='fill'
+          loader={imageProps.loader}
           alt='banner pizza'
         />
       </div>

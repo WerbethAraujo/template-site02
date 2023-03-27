@@ -1,0 +1,14 @@
+@use '../../../styles/variables'
+@use '../../../styles/mixins'
+
+.benefits
+  @include mixins.width-container
+  margin-bottom: variables.$marginBottom
+
+  .top
+    display: flex
+    justify-content: space-between
+
+  .bottom
+    display: flex
+    justify-content: center
