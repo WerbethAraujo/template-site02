@@ -1,7 +1,13 @@
-import { Inter } from 'next/font/google';
+import { Rubik } from 'next/font/google';
 
-const inter = Inter({ subsets: ['latin'] });
+import Header from '@/src/components/Header';
+
+const rubik = Rubik({ subsets: ['latin'] });
 
 export default function Home() {
-  return <></>;
+  return (
+    <main className={rubik.className}>
+      <Header />;
+    </main>
+  );
 }
