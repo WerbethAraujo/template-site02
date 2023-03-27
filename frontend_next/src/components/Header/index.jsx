@@ -19,8 +19,6 @@ const Header = ({ header }) => {
         <Image
           src={imageProps.src}
           objectFit='contain'
-          width={500}
-          height={277}
           layout='fill'
           loader={imageProps.loader}
           alt='banner pizza'
