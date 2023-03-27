@@ -1,0 +1,31 @@
+@use '../../../styles/variables'
+@use '../../../styles/mixins'
+
+.section
+  @include mixins.width-container
+  display: flex
+  justify-content: space-between
+  align-items: center
+  gap: 4rem
+  margin-bottom: variables.$marginBottom 
+  scroll-margin-top: 15rem
+
+
+  .image, .content
+    width: 100%
+    max-width: 58rem
+
+  .image
+    position: relative
+    height: 44rem
+
+  .content
+    span
+      text-transform: uppercase
+      font-size: 2rem
+      letter-spacing: 10%
+      margin-bottom: 1rem
+      color: variables.$gradient2
+
+    h2, p
+      margin-bottom: 2rem

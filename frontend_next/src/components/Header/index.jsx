@@ -8,7 +8,6 @@ import styles from './Header.module.sass';
 
 const Header = ({ header }) => {
   const imageProps = useNextSanityImage(client, header.image);
-  console.log(imageProps);
 
   return (
     <header className={styles.header}>
@@ -21,7 +20,7 @@ const Header = ({ header }) => {
           src={imageProps.src}
           objectFit='contain'
           width={500}
-          height={500}
+          height={277}
           layout='fill'
           loader={imageProps.loader}
           alt='banner pizza'
