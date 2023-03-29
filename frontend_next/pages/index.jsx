@@ -4,8 +4,15 @@ import Header from '@/src/components/Header';
 import Benefts from '@/src/components/Benefits';
 import ImageText from '@/src/components/imageText';
 import Cardapio from '@/src/components/Cardapio';
+import Testimonials from '@/src/components/Testimonials';
 
-export default function Home({ header, benefits, about, cardapioItem }) {
+export default function Home({
+  header,
+  benefits,
+  about,
+  cardapioItem,
+  testimonials,
+}) {
   return (
     <>
       <Header header={header} />;
@@ -13,6 +20,7 @@ export default function Home({ header, benefits, about, cardapioItem }) {
         <Benefts benefits={benefits} />;
         <ImageText data={about} />
         <Cardapio cardapio={cardapioItem} />
+        <Testimonials testimonials={testimonials} />
       </main>
     </>
   );
@@ -23,6 +31,7 @@ export const getStaticProps = async () => {
   const benefits = await client.fetch(`*[_type == 'benefits'][0..2]`);
   const about = await client.fetch(`*[_type == 'about'][0]`);
   const cardapioItem = await client.fetch(`*[_type == 'cardapioItem'][0..3]`);
+  const testimonials = await client.fetch(`*[_type == 'testimonials'][0..3]`);
 
   return {
     props: {
@@ -30,6 +39,7 @@ export const getStaticProps = async () => {
       benefits,
       about,
       cardapioItem,
+      testimonials,
     },
   };
 };
