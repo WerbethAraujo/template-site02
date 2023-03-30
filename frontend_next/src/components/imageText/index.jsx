@@ -24,6 +24,10 @@ const ImageText = ({ data }) => {
         <h2>{data.title}</h2>
         <p>{data.text}</p>
 
+        {data.address && <strong>{data.address}</strong>}
+        {data.email && <strong>{data.email}</strong>}
+        {data.phone && <strong>{data.phone}</strong>}
+
         <a href={data.url} className='btn btn-primary'>
           {data.button} &rarr;
         </a>

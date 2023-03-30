@@ -12,6 +12,7 @@ export default function Home({
   about,
   cardapioItem,
   testimonials,
+  location,
 }) {
   return (
     <>
@@ -21,6 +22,7 @@ export default function Home({
         <ImageText data={about} />
         <Cardapio cardapio={cardapioItem} />
         <Testimonials testimonials={testimonials} />
+        <ImageText data={location} />
       </main>
     </>
   );
@@ -32,6 +34,7 @@ export const getStaticProps = async () => {
   const about = await client.fetch(`*[_type == 'about'][0]`);
   const cardapioItem = await client.fetch(`*[_type == 'cardapioItem'][0..3]`);
   const testimonials = await client.fetch(`*[_type == 'testimonials'][0..3]`);
+  const location = await client.fetch(`*[_type == 'location'][0]`);
 
   return {
     props: {
@@ -40,6 +43,7 @@ export const getStaticProps = async () => {
       about,
       cardapioItem,
       testimonials,
+      location,
     },
   };
 };

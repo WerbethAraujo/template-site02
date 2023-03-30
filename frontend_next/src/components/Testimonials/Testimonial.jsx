@@ -9,7 +9,7 @@ import client from '../../sanity';
 
 const Testimonial = ({ name, testimonial, image }) => {
   const imageProps = useNextSanityImage(client, image);
-  console.log(imageProps);
+
   return (
     <div className={styles.container}>
       <div className={styles.image}>
