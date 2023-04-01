@@ -3,7 +3,6 @@ import styles from './Menu.module.sass';
 import MenuItem from './MenuItem';
 
 const Menu = ({ menu }) => {
-  console.log(menu);
   const renderMenu = menu.map((item) => (
     <MenuItem
       key={item._id}

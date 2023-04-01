@@ -5,5 +5,15 @@ import cardapioItem from './cardapioItem'
 import testimonials from './testimonials'
 import location from './location'
 import menu from './menu'
+import footer from './footer'
 
-export const schemaTypes = [header, benefits, about, cardapioItem, testimonials, location, menu]
+export const schemaTypes = [
+  header,
+  benefits,
+  about,
+  cardapioItem,
+  testimonials,
+  location,
+  menu,
+  footer,
+]

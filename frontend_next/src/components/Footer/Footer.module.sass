@@ -1,0 +1,68 @@
+@use '../../../styles/variables'
+@use '../../../styles/mixins'
+
+
+.footer 
+  @include mixins.width-container 
+  padding: 6rem 1rem 3rem
+
+  h2 
+   font-size: 1.6rem 
+   font-weight: 500 
+   text-transform: uppercase 
+   color: variables.$gradient2  
+
+
+  ul
+    list-style-type: none 
+
+
+  h3, li, li > a, p 
+    font-weight: 400 
+    font-size: 1.6rem 
+    text-decoration: none 
+    color: variables.$lightBlack
+
+  .top 
+    display: grid 
+    grid-template-columns: repeat(3, 1fr)
+    margin-bottom: 4rem 
+
+    .main
+      h3
+        margin: 1.5rem 0 
+        max-width: 27rem
+
+      ul > li 
+        display: inline-block 
+        margin-right: 1rem
+        
+        a 
+          display: flex 
+          padding: 1.5rem 
+
+
+    .links 
+      ul 
+        columns: 2
+        -webkit-columns: 2
+        -moz-comuns: 2 
+
+      ul > li > a:hover 
+        color: variables.$gradient2
+
+
+    .links, .contato 
+      h2 
+        margin-bottom: 3rem 
+
+      ul > li:not(:last-of-type)
+        margin-bottom: 2rem 
+
+  .bottom 
+    text-align: center
+  
+   
+
+
+
