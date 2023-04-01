@@ -1,0 +1,14 @@
+@use '../../../styles/variables'
+@use '../../../styles/mixins'
+
+
+.container 
+  background: variables.$background 
+  margin-bottom: variables.$marginBottom 
+  padding: 6rem 0
+
+  .menu 
+    @include mixins.width-container
+
+    .list
+      list-style: none
