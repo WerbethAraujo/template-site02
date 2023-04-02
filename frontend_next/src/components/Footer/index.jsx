@@ -33,17 +33,17 @@ const Footer = ({ footer }) => {
           <h3>{footer.text}</h3>
           <ul>
             <li>
-              <a href='#'>
+              <a href={footer.facebook}>
                 <FaFacebookSquare className='icon' />
               </a>
             </li>
             <li>
-              <a href='#'>
+              <a href={footer.instagram}>
                 <FaInstagramSquare className='icon' />
               </a>
             </li>
             <li>
-              <a href='#'>
+              <a href={footer.likedin}>
                 <FaLinkedin className='icon' />
               </a>
             </li>

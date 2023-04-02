@@ -1,11 +1,21 @@
 @use '../../../styles/variables'
+@use '../../../styles/mixins'
 
 .item 
   display: flex 
   align-items: center 
 
+  @include mixins.devices(mobile) 
+    flex-direction: column
+    text-align: center
+  
+
   &:not(:last-of-type)
     margin-bottom: 2.5rem
+
+    @include mixins.devices(mobile) 
+      margin-bottom: 4rem
+    
     
 
   .content 
@@ -26,6 +36,10 @@
     border-top: 1px dotted variables.$white 
     width: 100%
     margin: 0 2rem
+
+    
+    @include mixins.devices(mobile) 
+      display: none
 
   .price 
     font-size: 2rem 

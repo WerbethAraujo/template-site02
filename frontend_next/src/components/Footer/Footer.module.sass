@@ -24,9 +24,14 @@
     color: variables.$lightBlack
 
   .top 
-    display: grid 
-    grid-template-columns: repeat(3, 1fr)
+    display: flex
+    justify-content: space-between
     margin-bottom: 4rem 
+    
+    @include mixins.devices(tablet) 
+      flex-direction: column
+      gap: 6rem
+    
 
     .main
       h3

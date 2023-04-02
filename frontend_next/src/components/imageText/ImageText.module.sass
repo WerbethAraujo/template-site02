@@ -10,7 +10,13 @@
   margin-bottom: variables.$marginBottom 
   scroll-margin-top: 15rem
 
+  @include mixins.devices(tablet) 
+    flex-direction: column
+  
 
+  @include mixins.devices(mobile) 
+    margin-bottom: variables.$marginBottomMobile
+  
   .image, .content
     width: 100%
     max-width: 58rem
@@ -18,6 +24,14 @@
   .image
     position: relative
     height: 44rem
+
+    @include mixins.devices(tablet) 
+      margin-bottom: 4rem
+    
+
+    @include mixins.devices(mobile) 
+      height: 30rem
+    
 
   .content
     span

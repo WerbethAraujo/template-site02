@@ -6,6 +6,10 @@
   margin-bottom: variables.$marginBottom 
   padding: 6rem 0
 
+  @include mixins.devices(mobile) 
+    margin-bottom: variables.$marginBottomMobile 
+  
+
   .cardapio
     @include mixins.width-container
 

@@ -5,6 +5,11 @@
   @include mixins.width-container
   margin-bottom: variables.$marginBottom
 
+  
+  @include mixins.devices(mobile) 
+    margin-bottom: variables.$marginBottomMobile
+
+
   .top
     display: flex
     justify-content: space-between
@@ -12,3 +17,10 @@
   .bottom
     display: flex
     justify-content: center
+
+  
+  
+  .top, .bottom 
+    @include mixins.devices(tablet)
+      flex-direction: column
+      align-items: center

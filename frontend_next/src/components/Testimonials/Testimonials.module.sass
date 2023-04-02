@@ -5,6 +5,10 @@
   @include mixins.width-container
   margin-bottom: variables.$marginBottom 
 
+  @include mixins.devices(mobile) 
+    margin-bottom: variables.$marginBottomMobile
+  
+
   .heading 
     text-align: center
     margin-bottom: 6rem

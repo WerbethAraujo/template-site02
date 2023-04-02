@@ -1,3 +1,5 @@
+@use '../../../styles/mixins'
+
 .benefit
   display: flex
   align-items: center
@@ -15,3 +17,8 @@
       font-size: 1.6rem
       font-weight: 400
 
+
+  @include mixins.devices(tablet)
+    &:last-of-type
+    margin-bottom: 6rem
+   
