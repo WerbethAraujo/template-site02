@@ -7,6 +7,7 @@ import Cardapio from '@/src/components/Cardapio';
 import Testimonials from '@/src/components/Testimonials';
 import Menu from '@/src/components/Menu';
 import Footer from '@/src/components/Footer';
+import Navbar from '@/src/components/Navbar';
 
 export default function Home({
   header,
@@ -20,6 +21,7 @@ export default function Home({
 }) {
   return (
     <>
+      <Navbar />
       <Header header={header} />;
       <main>
         <Benefts benefits={benefits} />;
