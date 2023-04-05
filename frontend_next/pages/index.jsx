@@ -25,10 +25,10 @@ export default function Home({
       <Header header={header} />;
       <main>
         <Benefts benefits={benefits} />;
-        <ImageText data={about} />
+        <ImageText data={about} id='about' />
         <Cardapio cardapio={cardapioItem} />
         <Testimonials testimonials={testimonials} />
-        <ImageText data={location} />
+        <ImageText data={location} id='location' />
         <Menu menu={menu} />
       </main>
       <Footer footer={footer} />

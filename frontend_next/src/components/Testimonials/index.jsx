@@ -12,7 +12,7 @@ const Testimonials = ({ testimonials }) => {
     />
   ));
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id='testimonials'>
       <div className={styles.heading}>
         <span>Depoimentos</span>
         <h2>Dos nossos clientes</h2>

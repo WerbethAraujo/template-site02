@@ -6,11 +6,11 @@ import client from '@/src/sanity';
 
 import styles from './ImageText.module.sass';
 
-const ImageText = ({ data }) => {
+const ImageText = ({ data, id }) => {
   const imageProps = useNextSanityImage(client, data.image);
 
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id={id}>
       <div className={styles.image}>
         <Image
           src={imageProps.src}

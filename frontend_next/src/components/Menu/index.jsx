@@ -12,7 +12,7 @@ const Menu = ({ menu }) => {
     />
   ));
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id='menu'>
       <div className={styles.menu}>
         <h2 className='gold'>Menu</h2>
         <ul className={styles.list}>{renderMenu}</ul>

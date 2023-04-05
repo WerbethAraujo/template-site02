@@ -1,0 +1,36 @@
+@use '../../../styles/variables'
+@use '../../../styles/mixins'
+
+.container 
+  position: fixed
+  top: 0
+  width: 100%
+  padding: 1rem 0 
+  background: variables.$gradient1
+  z-index: 1 
+  
+  .navbar
+    @include mixins.width-container
+    display: flex
+    justify-content: space-between
+    align-items: center 
+
+    .links
+      @include mixins.devices(tablet)
+        display: none
+
+      ul 
+        li 
+          display: inline-block
+          margin: 0 1rem
+
+  .icon 
+    color: variables.$white 
+    width: 3.2rem
+    height: 3.2rem
+    display: none
+    z-index: 3
+
+    @include mixins.devices(tablet)
+      display: inline-block
+      cursor: pointer
