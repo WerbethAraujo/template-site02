@@ -24,6 +24,46 @@
           display: inline-block
           margin: 0 1rem
 
+  .mobile 
+    position: fixed 
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    z-index: 2
+    opacity: 0
+    transition: all 0.6s ease-in-out 
+
+    ul
+      text-align: center 
+
+      li
+        margin: 4rem 0
+
+        a
+          font-size: 2.1rem
+    
+    &.active 
+      opacity: 1
+      transition: all 0.6s ease-in-out .2s
+
+
+  .back
+    background: radial-gradient(variables.$gradient1, variables.$gradient2)
+    position: fixed 
+    height: 2rem
+    width: 2rem 
+    border-radius: 50%
+    top: 2.5rem 
+    right: 2.5rem
+    z-index: 1
+    opacity: 0
+    transition: all 0.5s ease-in-out .2s
+    
+    &.active 
+      opacity: 1
+      transform: scale(120)
+      transition: all 0.5s ease-in-out
+
   .icon 
     color: variables.$white 
     width: 3.2rem

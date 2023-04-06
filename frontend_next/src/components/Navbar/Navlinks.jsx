@@ -1,20 +1,28 @@
 import React from 'react';
 import styles from './Navlinks.module.sass';
 
-const Navlinks = () => {
+const Navlinks = ({ onToggleMenu }) => {
   return (
     <ul className={styles.list}>
       <li>
-        <a href='#about'>Sobre Nós</a>
+        <a href='#about' onClick={onToggleMenu}>
+          Sobre Nós
+        </a>
       </li>
       <li>
-        <a href='#testimonials'>Depoimentos</a>
+        <a href='#testimonials' onClick={onToggleMenu}>
+          Depoimentos
+        </a>
       </li>
       <li>
-        <a href='#location'>Localização</a>
+        <a href='#location' onClick={onToggleMenu}>
+          Localização
+        </a>
       </li>
       <li>
-        <a href='#menu'>Menu</a>
+        <a href='#menu' onClick={onToggleMenu}>
+          Menu
+        </a>
       </li>
     </ul>
   );
